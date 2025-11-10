@@ -8,17 +8,17 @@ class TestCalculator(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(self.calc.add(1, 2), 3)
-        self.assertEqual(self.calc.add(5, 2), 7)
+        self.assertEqual(self.calc.add(-5, -2), -7)
 
     # Add the following test methods to the TestCalculator class:
 
     def test_sub(self):
         self.assertEqual(self.calc.subtract(5, 2), 3)
-        self.assertEqual(self.calc.subtract(6, 2), 4)
+        self.assertEqual(self.calc.subtract(-6, -2), -4)
 
     def test_multiply(self):
         self.assertEqual(self.calc.multiply(3, 7), 21)
-        self.assertEqual(self.calc.multiply(8, 2), 16)
+        self.assertEqual(self.calc.multiply(-8, 2), -16)
 
     def test_divide(self):
         self.assertEqual(self.calc.divide(5, 2), 2)
@@ -26,7 +26,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_modulo(self):
         self.assertEqual(self.calc.modulo(5, 2), 1)
-        self.assertEqual(self.calc.modulo(12, 5), 2)
+        self.assertEqual(self.calc.modulo(-6, 10), -6)
 
 if __name__ == '__main__':
     unittest.main()
